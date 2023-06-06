@@ -1,11 +1,18 @@
 """with_classes.py
 
-_summary_
+A module that contains the SeatingArrangement class, which represents a seating
+arrangement in a hall and implements a specific seating algorithm based on the
+width of the rows and the sequence of people (boys and girls) entering the hall.
 
-_extended_summary_
+The seating algorithm works as follows:
+- Boys choose a row where both seats are free, and out of those rows, they pick
+  the one with the smallest width.
+- Girls choose a row where one seat is already occupied by a boy, and out of
+  those rows, they pick the one with the largest width.
 
 Returns:
-    _type_: _description_
+    SeatingArrangement: The main class of the module, which can be used to
+        implement the seating arrangement algorithm.
 """
 
 
@@ -13,33 +20,27 @@ class SeatingArrangement:
     """A class to represent a seating arrangement in a hall.
 
     Attributes:
-    ----------
-    N : int
-        The number of rows.
-    S : str
-        The sequence of people entering.
-    W : list
-        The widths of each row.
-    seats : list
-        The sorted list of rows with their current seat status.
+        N (int): The number of rows in the hall.
+        S (str): The sequence of people (represented as a string of '0's and '1's,
+            where '0' represents a boy and '1' represents a girl) entering the hall.
+        W (list): A list of integers representing the widths of the rows in the hall.
+        seats (list): A sorted list of lists, where each inner list represents a row
+            and contains three elements: the width of the row, and two boolean values
+            indicating whether the two seats in the row are occupied.
 
     Methods:
-    ----------
-    arrange_seats():
-        Arranges the seating according to the given rules.
+        arrange_seats(): Implements the seating arrangement algorithm and updates
+            the `seats` attribute.
     """
 
-    def __init__(self, num_row, seq, width):
-        """The constructor for SeatingArrangement class.
 
-        Parameters:
-        ----------
-        N : int
-            The number of rows.
-        S : str
-            The sequence of people entering.
-        W : list
-            The widths of each row.
+    def __init__(self, num_row, seq, width):
+        """The constructor for the SeatingArrangement class.
+
+        Args:
+            N (int): The number of rows in the hall.
+            S (str): The sequence of people entering the hall.
+            W (list): The widths of the rows in the hall.
         """
         self.num_row = num_row
         self.seq = seq
@@ -48,16 +49,20 @@ class SeatingArrangement:
         self.seats.sort()  # Sorting seats based on width in ascending order
 
     def arrange_seats(self):
-        """Arranges the seating according to the given rules.
+        """Implements the seating arrangement algorithm.
 
-        Boys choose a row where both seats are free, and out of those rows,
-        they pick the smallest one. Girls choose a row where one seat is taken
-        by a boy, and out of those rows, they pick the largest one.
+        The algorithm works as follows:
+        - Boys choose a row where both seats are free, and out of those rows, they
+          pick the one with the smallest width.
+        - Girls choose a row where one seat is already occupied by a boy, and out of
+          those rows, they pick the one with the largest width.
+
+        The method updates the `seats` attribute to reflect the implemented seating
+        arrangement.
 
         Returns:
-        ----------
-        list
-            The list of rows with their current seat status.
+            list: The list of rows with their current seat status after implementing
+                the seating arrangement.
         """
         for person in self.seq:
             if person == '0':  # Boy
