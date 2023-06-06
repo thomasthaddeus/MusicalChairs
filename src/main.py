@@ -17,13 +17,14 @@ The implementations use different strategies:
 
 import time
 import timeit
-from with_heapq import hq_seat_arrange
-from with_classes import SeatingArrangement
-from with_standalone import sort_seats, arrange_seats
-from with_zip_sorted import zip_seat_arrange
+import logging
+from modules.with_classes import SeatingArrangement
+from modules.with_heapq import hq_seat_arrange
+from modules.with_standalone import sort_seats, arrange_seats
+from modules.with_zip_sorted import zip_seat_arrange
 
 N = 2
-S = '0011'
+S = "0011"
 W = [2, 1]
 
 
@@ -32,49 +33,82 @@ def main() -> None:
     Executes and compares the outputs of four implementations of a seating
     arrangement algorithm.
 
-    The implementations are executed with the same input, their outputs are
-    printed to the console, and their execution times are measured and reported.
+    The implementations are executed with the same input, their outputs and
+    their execution times are logged into separate files.
     """
 
-    test_runs = 5  # adjust this to change the number of times each test is run
-    pause_time = 1  # adjust this to change the length of the pause between tests (in seconds)
+    # adjust this to change the number of times each test is run
+    test_runs = 5
+    # adjust this to change the length of the pause between tests (in seconds)
+    pause_time = 1
 
     for i in range(test_runs):
-        print(f"\nTest run {i+1}:")
+        # set up a separate logger for each method
+        class_logger = logging.getLogger("class")
+        class_logger.setLevel(logging.INFO)
+        hq_logger = logging.getLogger("hq")
+        hq_logger.setLevel(logging.INFO)
+        standalone_logger = logging.getLogger("standalone")
+        standalone_logger.setLevel(logging.INFO)
+        zip_logger = logging.getLogger("zip")
+        zip_logger.setLevel(logging.INFO)
+
+        # set up a file handler for each logger
+        class_handler = logging.FileHandler("./logs/class.log")
+        hq_handler = logging.FileHandler("./logs/hq.log")
+        standalone_handler = logging.FileHandler("./logs/standalone.log")
+        zip_handler = logging.FileHandler("./logs/zip.log")
+
+        # add the handlers to the loggers
+        class_logger.addHandler(class_handler)
+        hq_logger.addHandler(hq_handler)
+        standalone_logger.addHandler(standalone_handler)
+        zip_logger.addHandler(zip_handler)
 
         # Using the class:
+        class_logger.info("\nTest run %s:", i+1)
         start: float = timeit.default_timer()
         arrangement = SeatingArrangement(N, S, W)
-        print(arrangement.arrange_seats())
+        class_logger.info(arrangement.arrange_seats())
         end: float = timeit.default_timer()
-        print(f"Execution time (class approach): {end - start}")
+        class_logger.info("Execution time: %s", end - start)
 
         time.sleep(pause_time)
 
         # Using heapq:
+        hq_logger.info("\nTest run %s:", i+1)
         start = timeit.default_timer()
-        print(hq_seat_arrange(N, S, W))
+        hq_logger.info(hq_seat_arrange(N, S, W))
         end = timeit.default_timer()
-        print(f"Execution time (heapq approach): {end - start}")
+        hq_logger.info("Execution time: %s", end - start)
 
         time.sleep(pause_time)
 
         # Using standalone functions:
+        standalone_logger.info("\nTest run %s:", i+1)
         start = timeit.default_timer()
-        seats: list[list] = sort_seats(W)
-        print(arrange_seats(N, S, seats))
+        seats = sort_seats(W)
+        standalone_logger.info(arrange_seats(N, S, seats))
         end = timeit.default_timer()
-        print(f"Execution time (standalone functions approach): {end - start}")
+        standalone_logger.info("Execution time: %s", end - start)
 
         time.sleep(pause_time)
 
         # Using zip and sorted:
+        zip_logger.info("\nTest run %s:", i+1)
         start = timeit.default_timer()
-        print(zip_seat_arrange(N, S, W))
+        zip_logger.info(zip_seat_arrange(N, S, W))
         end = timeit.default_timer()
-        print(f"Execution time (zip and sorted approach): {end - start}")
+        zip_logger.info("Execution time: %s", end - start)
 
         time.sleep(pause_time)
 
-if __name__ == '__main__':
+        # close the handlers at the end of each test run
+        class_handler.close()
+        hq_handler.close()
+        standalone_handler.close()
+        zip_handler.close()
+
+
+if __name__ == "__main__":
     main()

@@ -1,5 +1,11 @@
 {
     "python.analysis.extraPaths": [
+        "./modules",
         "./src/modules"
-    ]
+    ],
+    "python.testing.pytestArgs": [
+        "src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
