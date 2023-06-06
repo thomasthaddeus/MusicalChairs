@@ -15,6 +15,7 @@ The implementations use different strategies:
 4. Using zip and sorted: zip_seat_arrange
 """
 
+import os
 import time
 import timeit
 import logging
@@ -23,6 +24,11 @@ from modules.with_heapq import hq_seat_arrange
 from modules.with_standalone import sort_seats, arrange_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
+
+# ensure the logs folder exists
+os.makedirs('src/logs', exist_ok=True)
+
+# Constants
 N = 2
 S = "0011"
 W = [2, 1]
@@ -54,10 +60,10 @@ def main() -> None:
         zip_logger.setLevel(logging.INFO)
 
         # set up a file handler for each logger
-        class_handler = logging.FileHandler("./logs/class.log")
-        hq_handler = logging.FileHandler("./logs/hq.log")
-        standalone_handler = logging.FileHandler("./logs/standalone.log")
-        zip_handler = logging.FileHandler("./logs/zip.log")
+        class_handler = logging.FileHandler("src/logs/class.log")
+        hq_handler = logging.FileHandler("src/logs/hq.log")
+        standalone_handler = logging.FileHandler("src/logs/standalone.log")
+        zip_handler = logging.FileHandler("src/logs/zip.log")
 
         # add the handlers to the loggers
         class_logger.addHandler(class_handler)
@@ -102,6 +108,12 @@ def main() -> None:
         zip_logger.info("Execution time: %s", end - start)
 
         time.sleep(pause_time)
+
+        # remove the handlers at the end of each test run
+        class_logger.removeHandler(class_handler)
+        hq_logger.removeHandler(hq_handler)
+        standalone_logger.removeHandler(standalone_handler)
+        zip_logger.removeHandler(zip_handler)
 
         # close the handlers at the end of each test run
         class_handler.close()
