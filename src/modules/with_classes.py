@@ -21,16 +21,19 @@ class SeatingArrangement:
 
     Attributes:
         N (int): The number of rows in the hall.
-        S (str): The sequence of people (represented as a string of '0's and '1's,
-            where '0' represents a boy and '1' represents a girl) entering the hall.
-        W (list): A list of integers representing the widths of the rows in the hall.
-        seats (list): A sorted list of lists, where each inner list represents a row
-            and contains three elements: the width of the row, and two boolean values
-            indicating whether the two seats in the row are occupied.
+        S (str): The sequence of people (represented as a string of '0's and
+                 '1's, where '0' represents a boy and '1' represents a girl)
+                 entering the hall.
+        W (list): A list of integers representing the widths of the rows in the
+                  hall.
+        seats (list): A sorted list of lists, where each inner list represents
+                      a row and contains three elements: the width of the row,
+                      and two boolean values indicating whether the two seats
+                      in the row are occupied.
 
     Methods:
-        arrange_seats(): Implements the seating arrangement algorithm and updates
-            the `seats` attribute.
+        arrange_seats(): Implements the seating arrangement algorithm and
+        updates the `seats` attribute.
     """
 
 
@@ -52,13 +55,13 @@ class SeatingArrangement:
         """Implements the seating arrangement algorithm.
 
         The algorithm works as follows:
-        - Boys choose a row where both seats are free, and out of those rows, they
-          pick the one with the smallest width.
-        - Girls choose a row where one seat is already occupied by a boy, and out of
-          those rows, they pick the one with the largest width.
+        - Boys choose a row where both seats are free, and out of those rows,
+        they pick the one with the smallest width.
+        - Girls choose a row where one seat is already occupied by a boy, and
+        out of those rows, they pick the one with the largest width.
 
-        The method updates the `seats` attribute to reflect the implemented seating
-        arrangement.
+        The method updates the `seats` attribute to reflect the implemented
+        seating arrangement.
 
         Returns:
             list: The list of rows with their current seat status after implementing

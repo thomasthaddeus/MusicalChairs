@@ -1,37 +1,44 @@
 """with_heapq.py
 
-_summary_
+This module contains a function, hq_seat_arrange, that implements a specific
+seating arrangement algorithm for a hall. The algorithm is based on the widths
+of the rows and the sequence of people (boys and girls) entering the hall.
 
-_extended_summary_
+The seating algorithm works as follows:
+- Boys choose a row where both seats are free, and out of those rows, they pick
+  the one with the smallest width. This is implemented using a min heap.
+- Girls choose a row where one seat is already occupied by a boy, and out of
+  those rows, they pick the one with the largest width. This is implemented
+  using a max heap.
+
+The hq_seat_arrange function uses two priority queues (implemented as heaps)
+to efficiently find the best row for each boy and girl.
 
 Returns:
-    _type_: _description_
+    hq_seat_arrange (function): A function that takes the number of rows in the
+        hall, the sequence of people entering, and the widths of the rows, and
+        returns the final seating arrangement after all people have entered.
 """
 
 import heapq
 
 
 def hq_seat_arrange(N, S, W):
-    """Finds the seating arrangement according to the given rules.
+    """Finds the optimal seating arrangement in a hall using a heap-based algorithm.
 
-    Uses two priority queues (heaps) to efficiently find the best row for each
-    boy and girl. Boys choose a row where both seats are free, and out of those rows,
-    they pick the smallest one. Girls choose a row where one seat is taken
-    by a boy, and out of those rows, they pick the largest one.
-
-    Parameters:
-    ----------
-    N : int
-        The number of rows.
-    S : str
-        The sequence of people entering.
-    W : list
-        The widths of each row.
+    Args:
+        N (int): The number of rows in the hall.
+        S (str): The sequence of people (represented as a string of '0's and
+                 '1's, where '0' represents a boy and '1' represents a girl)
+                 entering the hall.
+        W (list): A list of integers representing the widths of the rows in the
+                  hall.
 
     Returns:
-    ----------
-    list
-        The list of rows with their current seat status.
+        list: A list of strings representing the final seating arrangement in
+        each row. Each string contains 'B' if the first seat is occupied by a
+        boy and 'BG' if both seats are occupied (the first by a boy and the
+        second by a girl).
     """
     # Initialize two heaps
     boys_heap = [[w, i] for i, w in enumerate(W)]  # Min heap for boys

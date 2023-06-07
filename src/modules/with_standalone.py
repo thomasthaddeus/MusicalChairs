@@ -1,22 +1,29 @@
 """with_standalone.py
 
-_summary_
+This module provides two standalone functions to help determine the seating
+arrangement in a hall based on a sequence of people entering and the widths
+of the rows.
 
-_extended_summary_
+The arrange_seats function follows these rules:
+- Boys choose a row where both seats are free, and out of those rows,
+  they pick the smallest one.
+- Girls choose a row where one seat is taken by a boy, and out of those rows,
+  they pick the largest one.
+
+This module is intended to be a more bare-bones, standalone implementation of
+the seating arrangement algorithm, and it doesn't use any classes or priority
+queues. Instead, it simply sorts the seats and iterates through them for each
+person in the sequence.
 """
 
 def sort_seats(width):
     """Sorts the seats according to their widths.
 
-    Parameters:
-    ----------
-    width : list
-        The widths of each row.
+    Args:
+        width (list): The widths of each row.
 
     Returns:
-    ----------
-    list
-        The sorted list of seats with their current seat status.
+        list: The sorted list of seats with their current seat status.
     """
     seats = [[w, False, False] for w in width]
     seats.sort()  # Sorting seats based on width in ascending order
@@ -30,19 +37,13 @@ def arrange_seats(num_row, seq, seats):
     they pick the smallest one. Girls choose a row where one seat is taken
     by a boy, and out of those rows, they pick the largest one.
 
-    Parameters:
-    ----------
-    N : int
-        The number of rows.
-    S : str
-        The sequence of people entering.
-    seats : list
-        The sorted list of seats with their current seat status.
+    Args:
+        num_row (int): The number of rows.
+        seq (str): The sequence of people entering.
+        seats (list): The sorted list of seats with their current seat status.
 
     Returns:
-    ----------
-    list
-        The list of rows with their current seat status.
+        list: The list of rows with their current seat status.
     """
     for person in seq:
         if person == '0':  # Boy

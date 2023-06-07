@@ -1,8 +1,21 @@
 """with_zip_sorted.py
 
-_summary_
+This module provides a function, zip_seat_arrange, that determines the seating
+arrangement in a hall based on a sequence of people entering and the widths of
+the rows.
 
-_extended_summary_
+The function uses Python's built-in zip function to iterate over the sequence
+of people and the rows in parallel. The algorithm follows these rules:
+- Boys choose a row where both seats are free, and out of those rows, they pick
+  the smallest one.
+- Girls choose a row where one seat is taken by a boy, and out of those rows,
+  they pick the largest one.
+
+The rows are sorted by their widths at the start, and this ordering is used to
+select the smallest free row for each boy and the largest occupied row for each girl.
+
+This module offers an alternative, Pythonic approach to the seating arrangement
+problem that takes advantage of Python's built-in functions and data structures.
 """
 
 def zip_seat_arrange(num_row, seq, width):
@@ -13,19 +26,13 @@ def zip_seat_arrange(num_row, seq, width):
     they pick the smallest one. Girls choose a row where one seat is taken
     by a boy, and out of those rows, they pick the largest one.
 
-    Parameters:
-    ----------
-    N : int
-        The number of rows.
-    S : str
-        The sequence of people entering.
-    W : list
-        The widths of each row.
+    Args:
+        num_row (int): The number of rows.
+        seq (str): The sequence of people entering.
+        width (List[int]): The widths of each row.
 
     Returns:
-    ----------
-    list
-        The list of rows with their current seat status.
+        List[str]: The list of rows with their current seat status.
     """
     # Create the list of rows, each represented by a tuple (width, index)
     rows = sorted((w, i) for i, w in enumerate(width))
