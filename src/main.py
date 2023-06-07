@@ -1,4 +1,4 @@
-"""
+"""main.py
 This module provides four implementations of a seating arrangement algorithm.
 
 The algorithm is used to find a possible arrangement of people entering a hall
@@ -24,14 +24,10 @@ from modules.with_heapq import hq_seat_arrange
 from modules.with_standalone import sort_seats, arrange_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
-
-# ensure the logs folder exists
-os.makedirs('src/logs', exist_ok=True)
-
 # Constants
-N = 2
-S = "0011"
-W = [2, 1]
+N = 2 # number of rows
+S = "0011" # sequence
+W = [2, 1] # width
 
 
 def main() -> None:
