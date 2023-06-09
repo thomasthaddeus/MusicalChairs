@@ -8,25 +8,34 @@ The project has the following directory structure:
 
 ```markdown
 .
+├── .gitignore
+├── LICENSE.md
 ├── README.md
 ├── src
-│   ├── main.py
-│   └── python
-│       ├── __init__.py
-│       ├── with_classes.py
-│       ├── with_heapq.py
-│       ├── with_standalone.py
-│       └── with_zip_sorted.py
-└── test
-    ├── __pycache__
-    │   ├── test_with_classes.cpython-311-pytest-7.3.1.pyc
-    │   ├── test_with_heapq.cpython-311-pytest-7.3.1.pyc
-    │   ├── test_with_standalone.cpython-311-pytest-7.3.1.pyc
-    │   └── test_with_zip_sorted.cpython-311-pytest-7.3.1.pyc
-    ├── test_with_classes.py
-    ├── test_with_heapq.py
-    ├── test_with_standalone.py
-    └── test_with_zip_sorted.py
+│   ├── logs
+│   │   ├── class.log
+│   │   ├── hq.log
+│   │   ├── standalone.log
+│   │   └── zip.log
+│   ├── _main
+│   │   ├── _decorators_main.py
+│   │   └── _functions_main.py
+│   ├── main.py
+│   ├── modules
+│   │   ├── __init__.py
+│   │   ├── with_classes.py
+│   │   ├── with_heapq.py
+│   │   ├── with_standalone.py
+│   │   └── with_zip_sorted.py
+│   └── tests
+│       ├── __init__.py
+│       ├── __pycache__
+│       ├── test_with_classes.py
+│       ├── test_with_heapq.py
+│       ├── test_with_standalone.py
+│       └── test_with_zip_sorted.py
+└── .vscode
+    └── settings.json
 ```
 
 ### Files Overview
