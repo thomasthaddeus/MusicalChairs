@@ -50,4 +50,10 @@ The project has the following directory structure:
 
 ### Running the Tests
 
-To run the tests, you will need to install pytest (pip install pytest), and then you can run pytest command from your terminal at the root directory of the project.
+To run the tests, you will need to install pytest 
+
+```python
+pip install pytest
+```
+
+Then you can run pytest command from your terminal at the root directory of the project.
