@@ -1,4 +1,8 @@
-# Seating Arrangement Comparison Project
+---
+format: default
+title: Musical Chairs
+author: Thaddeus Thomas
+---
 
 This project contains implementations of a seating arrangement algorithm using four different approaches: using a class, using Python's heapq module, using standalone functions, and using Python's zip function along with the built-in sorted function.
 
