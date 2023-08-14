@@ -1,0 +1,99 @@
+Certainly! Here's a demonstration of how the HTML structures would look when using the newly added CSS classes:
+
+### 1. Tables:
+
+```html
+<table>
+    <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### 2. Modals:
+
+```html
+<!-- Trigger button for the modal -->
+<button id="openModal">Open Modal</button>
+
+<!-- Modal Structure -->
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h2>Modal Title</h2>
+        <p>This is the content inside the modal.</p>
+    </div>
+</div>
+
+<!-- JavaScript to handle modal open/close -->
+<script>
+    const modal = document.getElementById('myModal');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+</script>
+```
+
+### 3. Tooltips:
+
+```html
+<!-- Element with a tooltip -->
+<div class="tooltip">
+    Hover over me
+    <span class="tooltip-text">Tooltip text</span>
+</div>
+```
+
+### 4. Accordions:
+
+```html
+<!-- Accordion Structure -->
+<button class="accordion">Accordion 1</button>
+<div class="accordion-content">
+    <p>This is the content for Accordion 1.</p>
+</div>
+
+<button class="accordion">Accordion 2</button>
+<div class="accordion-content">
+    <p>This is the content for Accordion 2.</p>
+</div>
+
+<!-- JavaScript to handle accordion toggle -->
+<script>
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(accordion => {
+        accordion.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    });
+</script>
+```
+
+These are basic implementations of the components using the provided CSS classes. You can further customize and expand upon these structures based on your specific requirements. If you have any questions or need further modifications, please let me know!
