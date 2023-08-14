@@ -1,4 +1,10 @@
-# Seating Arrangement Comparison Project
+---
+format: default
+title: Musical Chairs
+author: Thaddeus Thomas
+---
+
+[![Deploy Jekyll](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml)
 
 This project contains implementations of a seating arrangement algorithm using four different approaches: using a class, using Python's heapq module, using standalone functions, and using Python's zip function along with the built-in sorted function.
 
@@ -8,25 +14,34 @@ The project has the following directory structure:
 
 ```markdown
 .
+├── .gitignore
+├── LICENSE.md
 ├── README.md
 ├── src
-│   ├── main.py
-│   └── python
-│       ├── __init__.py
-│       ├── with_classes.py
-│       ├── with_heapq.py
-│       ├── with_standalone.py
-│       └── with_zip_sorted.py
-└── test
-    ├── __pycache__
-    │   ├── test_with_classes.cpython-311-pytest-7.3.1.pyc
-    │   ├── test_with_heapq.cpython-311-pytest-7.3.1.pyc
-    │   ├── test_with_standalone.cpython-311-pytest-7.3.1.pyc
-    │   └── test_with_zip_sorted.cpython-311-pytest-7.3.1.pyc
-    ├── test_with_classes.py
-    ├── test_with_heapq.py
-    ├── test_with_standalone.py
-    └── test_with_zip_sorted.py
+│   ├── logs
+│   │   ├── class.log
+│   │   ├── hq.log
+│   │   ├── standalone.log
+│   │   └── zip.log
+│   ├── _main
+│   │   ├── _decorators_main.py
+│   │   └── _functions_main.py
+│   ├── main.py
+│   ├── modules
+│   │   ├── __init__.py
+│   │   ├── with_classes.py
+│   │   ├── with_heapq.py
+│   │   ├── with_standalone.py
+│   │   └── with_zip_sorted.py
+│   └── tests
+│       ├── __init__.py
+│       ├── __pycache__
+│       ├── test_with_classes.py
+│       ├── test_with_heapq.py
+│       ├── test_with_standalone.py
+│       └── test_with_zip_sorted.py
+└── .vscode
+    └── settings.json
 ```
 
 ### Files Overview
@@ -41,4 +56,10 @@ The project has the following directory structure:
 
 ### Running the Tests
 
-To run the tests, you will need to install pytest (pip install pytest), and then you can run pytest command from your terminal at the root directory of the project.
+To run the tests, you will need to install pytest 
+
+```python
+pip install pytest
+```
+
+Then you can run pytest command from your terminal at the root directory of the project.
