@@ -4,7 +4,7 @@ title: Musical Chairs
 author: Thaddeus Thomas
 ---
 
-[![Deploy Jekyll with GitHub Pages dependencies preinstalled](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml)
+[![Deploy Jekyll](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml)
 
 This project contains implementations of a seating arrangement algorithm using four different approaches: using a class, using Python's heapq module, using standalone functions, and using Python's zip function along with the built-in sorted function.
 
