@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musical Chairs</title>
-    <link rel="stylesheet" href="/src/css/styles2.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
     <header>
@@ -12,33 +12,35 @@
     </header>
     <main>
         <section>
-            <h2>About</h2>
-            <p>This is a project by Thomasthaddeus. You can find more details in the <a href="/README.md">README</a>.</p>
+            <div class="hero">
+                <h2>About</h2>
+                <p>This is a project by Thomasthaddeus. You can find more details in the <a href="./README.md">README</a>.</p>
+            </div>
         </section>
         <section>
             <h2>Directory Structure</h2>
             <div class="dropdown">
                 <span>src</span>
                 <div class="dropdown-content">
-                    <a href="/src/_decorators_main.py">_decorators_main.py</a>
-                    <a href="/src/_functions_main.py">_functions_main.py</a>
-                    <a href="/src/main.py">main.py</a>
+                    <a href="./src/app/_decorators_main.py">_decorators_main.py</a>
+                    <a href="./src/app/_functions_main.py">_functions_main.py</a>
+                    <a href="./src/app/main.py">main.py</a>
                     <div class="dropdown">
                         <span>tests</span>
                         <div class="dropdown-content">
-                            <a href="/src/tests/test_with_classes.py">test_with_classes.py</a>
-                            <a href="/src/tests/test_with_heapq.py">test_with_heapq.py</a>
-                            <a href="/src/tests/test_with_standalone.py">test_with_standalone.py</a>
-                            <a href="/src/tests/test_with_zip_sorted.py">test_with_zip_sorted.py</a>
+                            <a href="./src/app/tests/test_with_classes.py">test_with_classes.py</a>
+                            <a href="./src/app/tests/test_with_heapq.py">test_with_heapq.py</a>
+                            <a href="./src/app/tests/test_with_standalone.py">test_with_standalone.py</a>
+                            <a href="./src/app/tests/test_with_zip_sorted.py">test_with_zip_sorted.py</a>
                         </div>
                     </div>
                     <div class="dropdown">
                         <span>modules</span>
                         <div class="dropdown-content">
-                            <a href="/src/modules/with_classes.py">with_classes.py</a>
-                            <a href="/src/modules/with_heapq.py">with_heapq.py</a>
-                            <a href="/src/modules/with_standalone.py">with_standalone.py</a>
-                            <a href="/src/modules/with_zip_sorted.py">with_zip_sorted.py</a>
+                            <a href="./src/app/modules/with_classes.py">with_classes.py</a>
+                            <a href="./src/app/modules/with_heapq.py">with_heapq.py</a>
+                            <a href="./src/app/modules/with_standalone.py">with_standalone.py</a>
+                            <a href="./src/app/modules/with_zip_sorted.py">with_zip_sorted.py</a>
                         </div>
                     </div>
                 </div>
@@ -50,12 +52,25 @@
                 </div>
             </div>
         </section>
+        <section>
+            <button id="openModal">Open Modal</button>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <button class="modal-close" id="closeModal">&times;</button>
+                    <h2>Contributing</h2>
+                    <p>Contributions are welcome! Please read <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Copyright &copy; 2023 Thaddeus Thomas. All rights reserved.</p>
         <p><a href="/" target="_blank">Back to Home Site</a></p>
     </footer>
-<script src="/js/dropdown_enhancements.js"></script>
-<script src="/js/smooth_scrolling.js"></script>
+<script src="./src/js/dropdown_enhancements.js"></script>
+<script src="./src/js/smooth_scrolling.js"></script>
+<script src="./src/js/accordion.js"></script>
+<script src="./src/js/fetch.js"></script>
+<script src="./src/js/myModal.js"></script>
 </body>
 </html>
