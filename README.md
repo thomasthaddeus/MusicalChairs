@@ -1,8 +1,4 @@
----
-format: default
-title: Musical Chairs
-author: Thaddeus Thomas
----
+# Musical Chairs
 
 [![Deploy Jekyll](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/thomasthaddeus/musical-chairs/actions/workflows/jekyll-gh-pages.yml)
 
@@ -56,7 +52,7 @@ The project has the following directory structure:
 
 ### Running the Tests
 
-To run the tests, you will need to install pytest 
+To run the tests, you will need to install pytest
 
 ```python
 pip install pytest

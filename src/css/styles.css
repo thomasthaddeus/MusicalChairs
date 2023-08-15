@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Styles */
 header {
-    background-color: #3498db; /* Bright blue */
+    background-color: #3498dbe1; /* Bright blue */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -36,7 +36,7 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: #f5ffe8ea;
+    background-color: #fcfff7f3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
