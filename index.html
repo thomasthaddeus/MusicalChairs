@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Musical Chairs</title>
   <link rel="stylesheet" href="./src/css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -14,34 +15,26 @@
   </header>
   <main>
     <section>
-      <h2>The Algorithm</h2>
-      <p>The algorithm is implemented in four different ways. The basic idea is to sort the guests by their total number
-        of friends. Then, starting with the guest with the most friends, assign them a seat at the table and remove them
-        and all of their friends from the list of guests. Repeat this process until there are no guests remaining. The
-        different implementations of the algorithm differ in how the guests are sorted.</p>
-      <h3>Using a Class</h3>
-      <p>The first implementation uses a class to represent the guests. The class has two attributes: the total number
-        of friends and a list of the guest's friends. The class also has a method to calculate the total number of
-        friends and a method to remove a guest and all of their friends from a list of guests.</p>
-      <h3>Using Python's heapq Module</h3>
-      <p>The second implementation uses Python's heapq module to sort the guests by their total number of friends. The
-        heapq module is a priority queue implementation. It is used here to sort the guests by their total number of
-        friends in descending order. This approach requires that the guests be represented as a list of tuples
-        containing the total number of friends and the list of friends.</p>
-      <h3>Using Standalone Functions</h3>
-      The third implementation uses standalone functions to sort the guests by their total number of friends. The first
-      function calculates the total number of friends for a given guest. The second function sorts the guests by their
-      total number of friends in descending order. This approach requires that the guests be represented as a list of
-      tuples containing the total number of friends and the list of friends.
-      <h3>Using Python's zip Function</h3>
-      <p>The fourth implementation uses Python's zip function along with the built-in sorted function to sort the guests
-        by their total number of friends. The zip function takes two lists and returns a list of tuples containing the
-        corresponding elements of each list. The sorted function takes a list of tuples and sorts them by the first
-        element of each tuple. This approach requires that the guests be represented as two lists: one containing the
-        total number of friends and the other containing the list of friends.
-      </p>
-
       <div class="hero">
+        <h2>The Algorithm</h2>
+        <p>
+          The algorithm is implemented in four different ways. The basic idea is to sort the guests by their total number of friends. Then, starting with the guest with the most friends, assign them a seat at the table and remove them and all of their friends from the list of guests. Repeat this process until there are no guests remaining. The different implementations of the algorithm differ in how the guests are sorted.
+        </p>
+        <h3>Using a Class</h3>
+        <p>
+          The first implementation uses a class to represent the guests. The class has two attributes: the total number of friends and a list of the guest's friends. The class also has a method to calculate the total number of friends and a method to remove a guest and all of their friends from a list of guests.
+        </p>
+        <h3>Using Python's heapq Module</h3>
+        <p>
+          The second implementation uses Python's heapq module to sort the guests by their total number of friends. The heapq module is a priority queue implementation. It is used here to sort the guests by their total number of friends in descending order. This approach requires that the guests be represented as a list of tuples containing the total number of friends and the list of friends.
+        </p>
+        <h3>Using Standalone Functions</h3>
+          <p>The third implementation uses standalone functions to sort the guests by their total number of friends. The first function calculates the total number of friends for a given guest. The second function sorts the guests by their total number of friends in descending order. This approach requires that the guests be represented as a list of tuples containing the total number of friends and the list of friends.</p>
+        <h3>Using Python's zip Function</h3>
+        <p>
+          The fourth implementation uses Python's zip function along with the built-in sorted function to sort the guests by their total number of friends. The zip function takes two lists and returns a list of tuples containing the corresponding elements of each list. The sorted function takes a list of tuples and sorts them by the first element of each tuple. This approach requires that the guests be represented as two lists: one containing the total number of friends and the other containing the list of friends.
+        </p>
+        <hr />
         <h2>About</h2>
         <p>
           This is a project by Thomasthaddeus. You can find more details in
@@ -105,11 +98,10 @@
     <p>Copyright &copy; 2023 Thaddeus Thomas. All rights reserved.</p>
     <p><a href="/" target="_blank">Back to Home Site</a></p>
   </footer>
-  <script src="./src/js/dropdown_enhancements.js"></script>
+  <script src="./src/js/dropdown.js"></script>
   <script src="./src/js/smooth_scrolling.js"></script>
-  <script src="./src/js/accordion.js"></script>
-  <script src="./src/js/fetch.js"></script>
   <script src="./src/js/myModal.js"></script>
+  <script src="./src/js/displayReadme.js"></script>
 </body>
 
 </html>

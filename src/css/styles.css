@@ -77,10 +77,13 @@ section {
     color: black;
     padding: 12px 16px;
     display: block;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ddd;
+    color: #333;
 }
 
 .dropdown:hover .dropdown-content {
