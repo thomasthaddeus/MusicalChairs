@@ -1,8 +1,4 @@
-Certainly! Here's a demonstration of how the HTML structures would look when using the newly added CSS classes:
-
-### 1. Tables:
-
-```html
+<!-- Tables -->
 <table>
     <thead>
         <tr>
@@ -21,11 +17,8 @@ Certainly! Here's a demonstration of how the HTML structures would look when usi
         </tr>
     </tbody>
 </table>
-```
 
-### 2. Modals:
-
-```html
+<!-- Modals -->
 <!-- Trigger button for the modal -->
 <button id="openModal">Open Modal</button>
 
@@ -52,21 +45,18 @@ Certainly! Here's a demonstration of how the HTML structures would look when usi
         modal.style.display = 'none';
     });
 </script>
-```
 
-### 3. Tooltips:
 
-```html
+<!-- Tooltips -->
 <!-- Element with a tooltip -->
 <div class="tooltip">
     Hover over me
     <span class="tooltip-text">Tooltip text</span>
 </div>
-```
 
-### 4. Accordions:
 
-```html
+<!-- Accordions -->
+
 <!-- Accordion Structure -->
 <button class="accordion">Accordion 1</button>
 <div class="accordion-content">
@@ -80,20 +70,38 @@ Certainly! Here's a demonstration of how the HTML structures would look when usi
 
 <!-- JavaScript to handle accordion toggle -->
 <script>
-    const accordions = document.querySelectorAll('.accordion');
 
-    accordions.forEach(accordion => {
-        accordion.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const content = this.nextElementSibling;
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
-            }
-        });
-    });
 </script>
-```
 
-These are basic implementations of the components using the provided CSS classes. You can further customize and expand upon these structures based on your specific requirements. If you have any questions or need further modifications, please let me know!
+
+<!-- HTML Implementations -->
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Our Site</h1>
+    <p>Discover amazing content and join our community.</p>
+</div>
+
+
+<!-- List Boxes -->
+<div class="list-box">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+
+
+<!-- Picture Boxes -->
+<figure class="picture-box">
+    <img src="path-to-image.jpg" alt="Description">
+    <figcaption>Caption for the image</figcaption>
+</figure>
+
+
+<!-- Video Boxes -->
+<!-- Replace `VIDEO_ID` with the actual ID of the YouTube video you want to embed. -->
+<div class="video-box">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</div>
