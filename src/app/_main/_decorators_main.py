@@ -1,5 +1,4 @@
-"""
-_decorators_main.py
+"""_decorators_main.py
 
 This module provides four implementations of a seating arrangement algorithm
 and uses decorators to measure the execution time and handle logging.

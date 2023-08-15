@@ -44,7 +44,9 @@ def setup_logger(name) -> tuple[Logger, FileHandler]:
     return logger, handler
 
 def run_and_log(logger, function, *args, **kwargs):
-    """Run a function, log its output and execution time, and return its output."""
+    """
+    Run a function, log its output and execution time, and return its output.
+    """
     start: float = timeit.default_timer()
     output = function(*args, **kwargs)
     end: float = timeit.default_timer()
@@ -58,13 +60,19 @@ def cleanup_logger(logger, handler) -> None:
     handler.close()
 
 def test_run(name, function, *args, **kwargs) -> None:
-    """Perform a single test run of a function, including setup, execution, logging, and cleanup."""
+    """
+    Perform a single test run of a function, including setup, execution,
+    logging, and cleanup.
+    """
     logger, handler = setup_logger(name)
     run_and_log(logger, function, *args, **kwargs)
     cleanup_logger(logger, handler)
 
 def main() -> None:
-    """Execute and compare the outputs of four implementations of a seating arrangement algorithm."""
+    """
+    Execute and compare the outputs of four implementations of a seating
+    arrangement algorithm.
+    """
     test_runs = 5
     pause_time = 1
 

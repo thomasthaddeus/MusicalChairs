@@ -16,7 +16,7 @@ Returns:
 """
 
 
-class SeatingArrangement:
+class SeatingArrangement:  # pylint: disable=too-few-public-methods
     """A class to represent a seating arrangement in a hall.
 
     Attributes:

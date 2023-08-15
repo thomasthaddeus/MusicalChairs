@@ -1,0 +1,20 @@
+
+Test run 1:
+['BG', 'BG']
+Execution time: 5.089998012408614e-05
+
+Test run 2:
+['BG', 'BG']
+Execution time: 5.070003680884838e-05
+
+Test run 3:
+['BG', 'BG']
+Execution time: 5.770003190264106e-05
+
+Test run 4:
+['BG', 'BG']
+Execution time: 1.5400000847876072e-05
+
+Test run 5:
+['BG', 'BG']
+Execution time: 1.8099963199347258e-05

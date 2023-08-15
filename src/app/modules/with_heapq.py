@@ -23,7 +23,7 @@ Returns:
 import heapq
 
 
-def hq_seat_arrange(N, S, W):
+def hq_seat_arrange(N, S, W):  # pylint: disable=invalid-name
     """Finds the optimal seating arrangement in a hall using a heap-based algorithm.
 
     Args:
@@ -53,9 +53,13 @@ def hq_seat_arrange(N, S, W):
         if person == '0':  # Boy
             # Get the row with minimum width from boys_heap
             _, row = heapq.heappop(boys_heap)
-            seats[row] = 'B'  # Mark this row as occupied by a boy
+
+            # Mark this row as occupied by a boy
+            seats[row] = 'B'
+
             # Push this row into girls_heap
-            heapq.heappush(girls_heap, [-W[row], row])  # We use -W[row] because Python's heapq provides min heap
+            # We use -W[row] because Python's heapq provides min heap
+            heapq.heappush(girls_heap, [-W[row], row])
         else:  # Girl
             # Get the row with maximum width from girls_heap
             _, row = heapq.heappop(girls_heap)
