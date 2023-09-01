@@ -19,7 +19,7 @@ import timeit
 import logging
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from modules.with_standalone import sort_seats, arrange_seats
+from with_sort import sort_seats, arng_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # Constants
@@ -70,7 +70,7 @@ def benchmark_methods(test_runs, pause_time, loggers):
 
         # Using standalone functions:
         seats = sort_seats(W)
-        run_and_log(arrange_seats, loggers["standalone"], N, S, seats)
+        run_and_log(arng_seats, loggers["standalone"], N, S, seats)
         time.sleep(pause_time)
 
         # Using zip and sorted:

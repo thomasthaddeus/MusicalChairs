@@ -24,7 +24,7 @@ import logging
 from functools import wraps
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from modules.with_standalone import sort_seats, arrange_seats
+from with_sort import sort_seats, arrange_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # ensure the logs folder exists
