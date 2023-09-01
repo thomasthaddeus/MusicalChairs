@@ -1,0 +1,60 @@
+
+Test run 1:
+[[1, True, True], [2, True, True]]
+Execution time: 1.279998105019331e-05
+
+Test run 2:
+[[1, True, True], [2, True, True]]
+Execution time: 8.600007276982069e-06
+
+Test run 3:
+[[1, True, True], [2, True, True]]
+Execution time: 8.600007276982069e-06
+
+Test run 4:
+[[1, True, True], [2, True, True]]
+Execution time: 1.0599964298307896e-05
+
+Test run 5:
+[[1, True, True], [2, True, True]]
+Execution time: 9.09995287656784e-06
+
+Test run 1:
+[[1, True, True], [2, True, True]]
+Execution time: 9.199997293762863e-06
+
+Test run 2:
+[[1, True, True], [2, True, True]]
+Execution time: 3.0199997127056122e-05
+
+Test run 3:
+[[1, True, True], [2, True, True]]
+Execution time: 1.2600008631125093e-05
+
+Test run 4:
+[[1, True, True], [2, True, True]]
+Execution time: 9.199997293762863e-06
+
+Test run 5:
+[[1, True, True], [2, True, True]]
+Execution time: 2.6699999580159783e-05
+
+Test run 1:
+[[1, True, True], [2, True, True]]
+Execution time: 1.720000000204891e-05
+
+Test run 2:
+[[1, True, True], [2, True, True]]
+Execution time: 3.0099996365606785e-05
+
+Test run 3:
+[[1, True, True], [2, True, True]]
+Execution time: 2.890000178012997e-05
+
+Test run 4:
+[[1, True, True], [2, True, True]]
+Execution time: 9.399998816661537e-06
+
+Test run 5:
+[[1, True, True], [2, True, True]]
+Execution time: 2.7900008717551827e-05

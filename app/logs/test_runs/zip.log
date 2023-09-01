@@ -1,0 +1,60 @@
+
+Test run 1:
+['B', 'B']
+Execution time: 3.549997927621007e-05
+
+Test run 2:
+['B', 'B']
+Execution time: 4.449998959898949e-05
+
+Test run 3:
+['B', 'B']
+Execution time: 2.3100001271814108e-05
+
+Test run 4:
+['B', 'B']
+Execution time: 3.809999907389283e-05
+
+Test run 5:
+['B', 'B']
+Execution time: 4.140002420172095e-05
+
+Test run 1:
+[[2, True, False], [1, True, False]]
+Execution time: 4.749999789055437e-05
+
+Test run 2:
+[[2, True, False], [1, True, False]]
+Execution time: 4.780000017490238e-05
+
+Test run 3:
+[[2, True, False], [1, True, False]]
+Execution time: 5.0699993153102696e-05
+
+Test run 4:
+[[2, True, False], [1, True, False]]
+Execution time: 1.68999977177009e-05
+
+Test run 5:
+[[2, True, False], [1, True, False]]
+Execution time: 2.2299995180219412e-05
+
+Test run 1:
+[[2, True, False], [1, True, False]]
+Execution time: 8.140000863932073e-05
+
+Test run 2:
+[[2, True, False], [1, True, False]]
+Execution time: 1.8400009139440954e-05
+
+Test run 3:
+[[2, True, False], [1, True, False]]
+Execution time: 5.149999924469739e-05
+
+Test run 4:
+[[2, True, False], [1, True, False]]
+Execution time: 4.3799998820759356e-05
+
+Test run 5:
+[[2, True, False], [1, True, False]]
+Execution time: 4.369999805931002e-05

@@ -16,7 +16,7 @@ queues. Instead, it simply sorts the seats and iterates through them for each
 person in the sequence.
 """
 
-def sort_seats(width):
+def with_sort(width):
     """Sorts the seats according to their widths.
 
     Args:

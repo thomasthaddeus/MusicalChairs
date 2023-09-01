@@ -54,14 +54,14 @@ from typing import Any
 import pytest
 from app.modules.with_classes import SeatingArrangement
 from app.modules.with_heapq import hq_seat_arrange
-from app.modules.with_sort import sort_seats, arng_seats
+from app.modules.with_sort import with_sort, arng_seats
 from app.modules.with_zip_sorted import zip_seat_arrange
 
 # List of all the methods for easy testing
 methods = [
-    lambda N, S, W: SeatingArrangement(N, S, W).arrange_seats(),
+    lambda num_rows, seq, width: SeatingArrangement(num_rows, seq, width).arrange_seats(),
     hq_seat_arrange,
-    lambda N, S, W: arng_seats(N, S, sort_seats(W)),
+    lambda num_rows, seq, width: arng_seats(num_rows, seq, with_sort(width)),
     zip_seat_arrange
 ]
 
@@ -72,90 +72,90 @@ def test_basic_functionality(method: Any):
     Test each method with a variety of inputs to ensure they produce the
     expected outputs.
     """
-    N = 2
-    S = '0011'
-    W = [2, 1]
+    num_rows = 2
+    seq = '0011'
+    width = [2, 1]
     # Expected output can be adjusted based on the actual expected results
     expected_output = ...  # Replace with the expected output
-    assert method(N, S, W) == expected_output
+    assert method(num_rows, seq, width) == expected_output
 
 #------------------------- 2. Edge Cases ----------------------------
 @pytest.mark.parametrize("method", methods)
 def test_empty_hall(method: Any):
     """Test with an empty hall (no rows)."""
-    N = 0
-    S = ''
-    W = []
-    assert method(N, S, W) == []
+    num_rows = 0
+    seq = ''
+    width = []
+    assert method(num_rows, seq, width) == []
 
 @pytest.mark.parametrize("method", methods)
 def test_only_boys(method: Any):
     """Test with a sequence containing only boys or only girls."""
-    N = 2
-    S = '00'
-    W = [2, 1]
+    num_rows = 2
+    seq = '00'
+    width = [2, 1]
     # Adjust expected_output accordingly
     expected_output = ...
-    assert method(N, S, W) == expected_output
+    assert method(num_rows, seq, width) == expected_output
 
 @pytest.mark.parametrize("method", methods)
 def test_only_girls(method: Any):
     """Test with a sequence containing only boys or only girls."""
-    N = 2
-    S = '11'
-    W = [2, 1]
+    num_rows = 2
+    seq = '11'
+    width = [2, 1]
     # Adjust expected_output accordingly
     expected_output = ...
-    assert method(N, S, W) == expected_output
+    assert method(num_rows, seq, width) == expected_output
 
 @pytest.mark.parametrize("method", methods)
 def test_same_width(method: Any):
     """Test with all rows having the same width."""
-    N = 2
-    S = '0011'
-    W = [2, 2]
+    num_rows = 2
+    seq = '0011'
+    width = [2, 2]
     # Adjust expected_output accordingly
     expected_output = ...
-    assert method(N, S, W) == expected_output
+    assert method(num_rows, seq, width) == expected_output
 
 # ------------------------ 3. Invalid Inputs ----------------------------------
 @pytest.mark.parametrize("method", methods)
 def test_negative_rows(method: Any):
     """Test with negative numbers of rows."""
-    N = -2
-    S = '0011'
-    W = [2, 1]
+    num_rows = -2
+    seq = '0011'
+    width = [2, 1]
     with pytest.raises(ValueError):
-        method(N, S, W)
+        method(num_rows, seq, width)
 
 @pytest.mark.parametrize("method", methods)
 def test_non_binary_sequence(method: Any):
     """Test with non-binary sequences (i.e., sequences containing characters
     other than '0' and '1').
     """
-    N = 2
-    S = '0021'
-    W = [2, 1]
+    num_rows = 2
+    seq = '0021'
+    width = [2, 1]
     with pytest.raises(ValueError):
-        method(N, S, W)
+        method(num_rows, seq, width)
 
 @pytest.mark.parametrize("method", methods)
 def test_mismatched_lengths(method: Any):
     """Test with mismatched lengths of sequence and width lists."""
-    N = 2
-    S = '0011'
-    W = [2]
+    num_rows = 2
+    seq = '0011'
+    width = [2]
     with pytest.raises(ValueError):
-        method(N, S, W)
+        method(num_rows, seq, width)
 
 @pytest.mark.parametrize("method", methods)
 def test_negative_width(method: Any):
     """Test with negative or zero widths."""
-    N = 2
-    S = '0011'
-    W = [-2, 1]
+    num_rows = 2
+    seq = '0011'
+    width = [-2, 1]
     with pytest.raises(ValueError):
-        method(N, S, W)
+        method(num_rows, seq, width)
 
 # ---------------------------- 4. Performance Tests ------------------------
 # This is more for benchmarking and might not have a clear 'expected' result.
@@ -166,11 +166,11 @@ def test_large_input(method: Any):
     Test with a large number of rows and a long sequence to measure the
     performance of each method.
     """
-    N = 1000
-    S = '0' * 500 + '1' * 500
-    W = [i for i in range(1, 1001)]
+    num_rows = 1000
+    seq = '0' * 500 + '1' * 500
+    width = [i for i in range(1, 1001)]
     # No assertion here, just checking for successful execution
-    method(N, S, W)
+    method(num_rows, seq, width)
 
 # ------------------------- 5. Consistency Tests -----------------------------
 def test_consistency():
@@ -179,8 +179,8 @@ def test_consistency():
     - This can be done by comparing the outputs of the different methods for a
       variety of inputs.
     """
-    N = 2
-    S = '0011'
-    W = [2, 1]
-    results = [method(N, S, W) for method in methods]
+    num_rows = 2
+    seq = '0011'
+    width = [2, 1]
+    results = [method(num_rows, seq, width) for method in methods]
     assert all(result == results[0] for result in results)

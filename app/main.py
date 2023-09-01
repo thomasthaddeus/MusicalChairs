@@ -17,9 +17,10 @@ The implementations use different strategies:
 import time
 import timeit
 import logging
+from logging.handlers import RotatingFileHandler
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from with_sort import sort_seats, arng_seats
+from modules.with_sort import with_sort, arng_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # Constants
@@ -69,7 +70,7 @@ def benchmark_methods(test_runs, pause_time, loggers):
         time.sleep(pause_time)
 
         # Using standalone functions:
-        seats = sort_seats(W)
+        seats = with_sort(W)
         run_and_log(arng_seats, loggers["standalone"], N, S, seats)
         time.sleep(pause_time)
 
@@ -87,9 +88,9 @@ def main() -> None:
     execution times are logged into separate files.
     """
     # adjust this to change the number of times each test is run
-    test_runs = 5
+    test_runs = 100
     # adjust this to change the length of the pause between tests (in seconds)
-    pause_time = 1
+    pause_time = 0.005
 
     # set up a separate logger for each method
     loggers = {
@@ -99,12 +100,16 @@ def main() -> None:
         "zip": logging.getLogger("zip")
     }
 
+    max_log_size = int(1e6)  # 1MB converted to integer
+    backup_count = 3
+
     handlers = {
-        "class": logging.FileHandler("src/app/logs/class.log"),
-        "hq": logging.FileHandler("src/app/logs/hq.log"),
-        "standalone": logging.FileHandler("src/app/logs/standalone.log"),
-        "zip": logging.FileHandler("src/app/logs/zip.log")
+        "class": RotatingFileHandler("app/logs/class.log", maxBytes=max_log_size, backupCount=backup_count),
+        "hq": RotatingFileHandler("app/logs/hq.log", maxBytes=max_log_size, backupCount=backup_count),
+        "standalone": RotatingFileHandler("app/logs/standalone.log", maxBytes=max_log_size, backupCount=backup_count),
+        "zip": RotatingFileHandler("app/logs/zip.log", maxBytes=max_log_size, backupCount=backup_count)
     }
+
 
     for name, logger in loggers.items():
         logger.setLevel(logging.INFO)
