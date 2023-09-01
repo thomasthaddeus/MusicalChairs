@@ -24,7 +24,7 @@ import logging
 from logging import Logger, FileHandler
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from with_sort import sort_seats, arng_seats
+from with_sort import with_sort, arng_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # ensure the logs folder exists
@@ -91,7 +91,7 @@ def main() -> None:
         time.sleep(pause_time)
 
         # Using standalone functions:
-        seats = sort_seats(W)
+        seats = with_sort(W)
         test_run("standalone", arng_seats, N, S, seats)
         time.sleep(pause_time)
 

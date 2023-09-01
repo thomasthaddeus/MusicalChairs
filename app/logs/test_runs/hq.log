@@ -1,0 +1,60 @@
+
+Test run 1:
+['BG', 'BG']
+Execution time: 5.089998012408614e-05
+
+Test run 2:
+['BG', 'BG']
+Execution time: 5.070003680884838e-05
+
+Test run 3:
+['BG', 'BG']
+Execution time: 5.770003190264106e-05
+
+Test run 4:
+['BG', 'BG']
+Execution time: 1.5400000847876072e-05
+
+Test run 5:
+['BG', 'BG']
+Execution time: 1.8099963199347258e-05
+
+Test run 1:
+[[2, True, True], [1, True, True]]
+Execution time: 2.1800005924887955e-05
+
+Test run 2:
+[[2, True, True], [1, True, True]]
+Execution time: 5.080000846646726e-05
+
+Test run 3:
+[[2, True, True], [1, True, True]]
+Execution time: 2.9800008633174002e-05
+
+Test run 4:
+[[2, True, True], [1, True, True]]
+Execution time: 1.7999991541728377e-05
+
+Test run 5:
+[[2, True, True], [1, True, True]]
+Execution time: 1.4699995517730713e-05
+
+Test run 1:
+[[2, True, True], [1, True, True]]
+Execution time: 1.8100006855092943e-05
+
+Test run 2:
+[[2, True, True], [1, True, True]]
+Execution time: 2.479999966453761e-05
+
+Test run 3:
+[[2, True, True], [1, True, True]]
+Execution time: 4.3199994252063334e-05
+
+Test run 4:
+[[2, True, True], [1, True, True]]
+Execution time: 2.269999822601676e-05
+
+Test run 5:
+[[2, True, True], [1, True, True]]
+Execution time: 1.7700003809295595e-05

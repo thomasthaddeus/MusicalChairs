@@ -1,2 +1,3 @@
 [tool.pytest.ini_options]
-testpaths = ["E:/Python/MusicalChairs/app/tests"]
+testpaths = ["./tests"]
+#addopts="-n 4"

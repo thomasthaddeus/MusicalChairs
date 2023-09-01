@@ -1,0 +1,99 @@
+******************************************************************************
+***************************** Combined Test Runs *****************************
+******************************************************************************
+
+    Total Cycles: <!-- keep running tally here -->
+
+    class.log
+        Average Execution Time:     4.9200 seconds
+        Max Execution Time:         9.4000 seconds
+        Min Execution Time:         1.0600 seconds
+        Total Execution Time:       73.8000 seconds
+
+    hq.log
+        Average Execution Time:     3.0293 seconds
+        Max Execution Time:         5.7700 seconds
+        Min Execution Time:         1.4700 seconds
+        Total Execution Time:       45.4400 seconds
+
+    standalone.log
+        Average Execution Time:     3.2467 seconds
+        Max Execution Time:         5.9000 seconds
+        Min Execution Time:         1.2200 seconds
+        Total Execution Time:       48.6999 seconds
+
+    zip.log
+        Average Execution Time:     4.0440 seconds
+        Max Execution Time:         8.1400 seconds
+        Min Execution Time:         1.6900 seconds
+        Total Execution Time:       60.6600 seconds
+
+
+
+# -------------------------------- class.log -------------------------------- #
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 1.279998105019331e-05
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 8.600007276982069e-06
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 8.600007276982069e-06
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 1.0599964298307896e-05
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 9.09995287656784e-06
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 9.199997293762863e-06
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 3.0199997127056122e-05
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 1.2600008631125093e-05
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 9.199997293762863e-06
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 2.6699999580159783e-05
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 1.720000000204891e-05
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 3.0099996365606785e-05
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 2.890000178012997e-05
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 9.399998816661537e-06
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 2.7900008717551827e-05
+
+# ---------------------------------- hq.log ---------------------------------- #
+Test run 1: ['BG', 'BG'] Execution time: 5.089998012408614e-05
+Test run 2: ['BG', 'BG'] Execution time: 5.070003680884838e-05
+Test run 3: ['BG', 'BG'] Execution time: 5.770003190264106e-05
+Test run 4: ['BG', 'BG'] Execution time: 1.5400000847876072e-05
+Test run 5: ['BG', 'BG'] Execution time: 1.8099963199347258e-05
+Test run 1: [[2, True, True], [1, True, True]] Execution time: 2.1800005924887955e-05
+Test run 2: [[2, True, True], [1, True, True]] Execution time: 5.080000846646726e-05
+Test run 3: [[2, True, True], [1, True, True]] Execution time: 2.9800008633174002e-05
+Test run 4: [[2, True, True], [1, True, True]] Execution time: 1.7999991541728377e-05
+Test run 5: [[2, True, True], [1, True, True]] Execution time: 1.4699995517730713e-05
+Test run 1: [[2, True, True], [1, True, True]] Execution time: 1.8100006855092943e-05
+Test run 2: [[2, True, True], [1, True, True]] Execution time: 2.479999966453761e-05
+Test run 3: [[2, True, True], [1, True, True]] Execution time: 4.3199994252063334e-05
+Test run 4: [[2, True, True], [1, True, True]] Execution time: 2.269999822601676e-05
+Test run 5: [[2, True, True], [1, True, True]] Execution time: 1.7700003809295595e-05
+
+# ------------------------------ standalone.log ------------------------------ #
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 2.8800044674426317e-05
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 5.199981387704611e-06
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 5.89998671784997e-06
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 5.599984433501959e-06
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 5.799985956400633e-06
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 1.9699989934451878e-05
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 5.0000002374872565e-05
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 1.3999990187585354e-05
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 1.4299992471933365e-05
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 5.900001269765198e-06
+Test run 1: [[1, True, True], [2, True, True]] Execution time: 1.920000067912042e-05
+Test run 2: [[1, True, True], [2, True, True]] Execution time: 1.6200006939470768e-05
+Test run 3: [[1, True, True], [2, True, True]] Execution time: 1.2200005585327744e-05
+Test run 4: [[1, True, True], [2, True, True]] Execution time: 1.4000004739500582e-05
+Test run 5: [[1, True, True], [2, True, True]] Execution time: 1.4600009308196604e-05
+
+# --------------------------------- zip.log --------------------------------- #
+Test run 1: ['B', 'B'] Execution time: 3.549997927621007e-05
+Test run 2: ['B', 'B'] Execution time: 4.449998959898949e-05
+Test run 3: ['B', 'B'] Execution time: 2.3100001271814108e-05
+Test run 4: ['B', 'B'] Execution time: 3.809999907389283e-05
+Test run 5: ['B', 'B'] Execution time: 4.140002420172095e-05
+Test run 1: [[2, True, False], [1, True, False]] Execution time: 4.749999789055437e-05
+Test run 2: [[2, True, False], [1, True, False]] Execution time: 4.780000017490238e-05
+Test run 3: [[2, True, False], [1, True, False]] Execution time: 5.0699993153102696e-05
+Test run 4: [[2, True, False], [1, True, False]] Execution time: 1.68999977177009e-05
+Test run 5: [[2, True, False], [1, True, False]] Execution time: 2.2299995180219412e-05
+Test run 1: [[2, True, False], [1, True, False]] Execution time: 8.140000863932073e-05
+Test run 2: [[2, True, False], [1, True, False]] Execution time: 1.8400009139440954e-05
+Test run 3: [[2, True, False], [1, True, False]] Execution time: 5.149999924469739e-05
+Test run 4: [[2, True, False], [1, True, False]] Execution time: 4.3799998820759356e-05
+Test run 5: [[2, True, False], [1, True, False]] Execution time: 4.369999805931002e-05

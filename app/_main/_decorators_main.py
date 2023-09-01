@@ -24,7 +24,7 @@ import logging
 from functools import wraps
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from with_sort import sort_seats, arrange_seats
+from with_sort import with_sort, arrange_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # ensure the logs folder exists
@@ -124,7 +124,7 @@ def run_standalone(logger):
     Returns:
         list: The result of the arrange_seats method.
     """
-    seats = sort_seats(W)
+    seats = with_sort(W)
     return arrange_seats(N, S, seats)
 
 
