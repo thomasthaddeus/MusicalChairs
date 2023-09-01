@@ -1,12 +1,14 @@
 {
-    "python.analysis.extraPaths": [
-        "./src/app",
-        "./src/app/modules"
-    ],
-    "python.testing.pytestArgs": [
-        "src/app/tests"
-    ],
+    "python.analysis.typeCheckingMode": "basic",
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "svg.preview.background": "transparent"
+    "python.analysis.extraPaths": [
+        "./app",
+        "./app/modules",
+        "./app/modules"
+    ],
+    "python.testing.pytestPath": "pytest",
+    "python.testing.pytestArgs": [
+        "."
+    ]
 }

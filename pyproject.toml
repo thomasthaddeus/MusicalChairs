@@ -1,0 +1,2 @@
+[tool.pytest.ini_options]
+testpaths = ["E:/Python/MusicalChairs/app/tests"]

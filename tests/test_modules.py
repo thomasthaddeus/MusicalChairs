@@ -19,13 +19,14 @@ Note:
     seating arrangement methods to ensure their continued correctness.
 """
 
+from types import MethodType
 import pytest
-from with_standalone import sort_seats, arrange_seats
+from with_sort import sort_seats, arng_seats
 from with_heapq import hq_seat_arrange
 from with_zip_sorted import zip_seat_arrange
 from with_classes import SeatingArrangement
 
-
+@pytest.mark.parametrize("method", MethodType) # type: ignore
 def test_seating_arrangement_class():
     """
     Test the SeatingArrangement class for correct seat arrangement.
@@ -62,7 +63,7 @@ def test_seating_arrangement_functions():
     S = '0011'
     W = [2, 1]
     seats = sort_seats(W)
-    assert arrange_seats(N, S, seats) == [[1, True, True], [2, True, True]]
+    assert arng_seats(N, S, seats) == [[1, True, True], [2, True, True]]
 
 def test_hq_seat_arrange():
     """

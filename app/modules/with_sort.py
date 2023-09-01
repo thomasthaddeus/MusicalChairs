@@ -1,4 +1,4 @@
-"""with_standalone.py
+"""with_sort.py
 
 This module provides two standalone functions to help determine the seating
 arrangement in a hall based on a sequence of people entering and the widths
@@ -30,7 +30,7 @@ def sort_seats(width):
     return seats
 
 
-def arrange_seats(num_row, seq, seats):
+def arng_seats(num_row, seq, seats):
     """Arranges the seating according to the given rules.
 
     Boys choose a row where both seats are free, and out of those rows,

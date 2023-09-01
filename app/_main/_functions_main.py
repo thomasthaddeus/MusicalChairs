@@ -24,16 +24,17 @@ import logging
 from logging import Logger, FileHandler
 from modules.with_classes import SeatingArrangement
 from modules.with_heapq import hq_seat_arrange
-from modules.with_standalone import sort_seats, arrange_seats
+from with_sort import sort_seats, arng_seats
 from modules.with_zip_sorted import zip_seat_arrange
 
 # ensure the logs folder exists
-os.makedirs('src/logs', exist_ok=True)
+os.makedirs("src/logs", exist_ok=True)
 
 # Constants
 N = 2
 S = "0011"
 W = [2, 1]
+
 
 def setup_logger(name) -> tuple[Logger, FileHandler]:
     """Set up a logger with the specified name and return it."""
@@ -42,6 +43,7 @@ def setup_logger(name) -> tuple[Logger, FileHandler]:
     handler = logging.FileHandler(f"src/logs/{name}.log")
     logger.addHandler(handler)
     return logger, handler
+
 
 def run_and_log(logger, function, *args, **kwargs):
     """
@@ -54,10 +56,12 @@ def run_and_log(logger, function, *args, **kwargs):
     logger.info("Execution time: %s", end - start)
     return output
 
+
 def cleanup_logger(logger, handler) -> None:
     """Remove the handler from the logger and close the handler."""
     logger.removeHandler(handler)
     handler.close()
+
 
 def test_run(name, function, *args, **kwargs) -> None:
     """
@@ -67,6 +71,7 @@ def test_run(name, function, *args, **kwargs) -> None:
     logger, handler = setup_logger(name)
     run_and_log(logger, function, *args, **kwargs)
     cleanup_logger(logger, handler)
+
 
 def main() -> None:
     """
@@ -87,12 +92,13 @@ def main() -> None:
 
         # Using standalone functions:
         seats = sort_seats(W)
-        test_run("standalone", arrange_seats, N, S, seats)
+        test_run("standalone", arng_seats, N, S, seats)
         time.sleep(pause_time)
 
         # Using zip and sorted:
         test_run("zip", zip_seat_arrange, N, S, W)
         time.sleep(pause_time)
+
 
 if __name__ == "__main__":
     main()
