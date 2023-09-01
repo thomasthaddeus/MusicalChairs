@@ -58,6 +58,8 @@ from app.modules.with_sort import with_sort, arng_seats
 from app.modules.with_zip_sorted import zip_seat_arrange
 
 # List of all the methods for easy testing
+# num_rows=number of rows, seq=sequence, width=widths
+
 methods = [
     lambda num_rows, seq, width: SeatingArrangement(num_rows, seq, width).arrange_seats(),
     hq_seat_arrange,
